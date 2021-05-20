@@ -54,8 +54,7 @@ module.exports = (env, options) => {
     },
 
     devServer: {
-      port: 3000,
-      hot: !isProduction
+      port: 3000
     },
 
     plugins: [
@@ -82,11 +81,7 @@ module.exports = (env, options) => {
           test: /\.module.scss$/,
           use: [
             {
-              loader: MiniCssExtractPlugin.loader,
-              options: {
-                hmr: !isProduction,
-                reloadAll: true
-              }
+              loader: MiniCssExtractPlugin.loader
             },
             {
               loader: 'css-loader',
@@ -110,11 +105,7 @@ module.exports = (env, options) => {
           exclude: /\.module.scss$/,
           use: [
             {
-              loader: MiniCssExtractPlugin.loader,
-              options: {
-                hmr: !isProduction,
-                reloadAll: true
-              }
+              loader: MiniCssExtractPlugin.loader
             },
             {
               loader: 'css-loader',
