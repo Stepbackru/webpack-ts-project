@@ -33,11 +33,18 @@
     "linebreak-style": ["error", "windows"],
     "no-use-before-define": ["error", { "functions": false, "variables": false }],
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
-    "import/extensions": ["error", "ignorePackages", {"ts": "never"}],
-    "max-len": ["error", { "code": 80 }],
+    "import/extensions": ["error", "ignorePackages", {
+      "js": "never",
+      "jsx": "never",
+      "ts": "never",
+      "tsx": "never"}],
+    "max-len": ["error", { "code": 90 }],
     "arrow-body-style": ["error", "as-needed", { "requireReturnForObjectLiteral": true }],
     "@typescript-eslint/no-explicit-any": ["error"],
     "@typescript-eslint/explicit-function-return-type": ["error"],
-    "@typescript-eslint/explicit-member-accessibility": ["error"]
+    "@typescript-eslint/explicit-member-accessibility": ["error"],
+    "lines-between-class-members" : "off" , 
+    "@typescript-eslint/lines-between-class-members": ["error", "always", { "exceptAfterOverload": true, "exceptAfterSingleLine": true }],
+    "class-methods-use-this": ["error", { "exceptMethods": ["roundNumber"] }]
   }
 }
